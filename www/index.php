@@ -12,5 +12,6 @@ file_put_contents($file, $num_players++);
 <body>
 <!-- <?php echo rand(1000000000, 9999999999); ?> -->
   <button id="myBtn" value="<?php echo $myNum; ?>"/>
+  <?php echo $num_players; ?>
 </body>
 </html>
