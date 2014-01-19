@@ -1,5 +1,5 @@
 <?php
-$file = "players"
+$file = "players";
 $num_players = file_get_contents($file);
 $myNum = $num_players;
 file_put_contents($file, $num_players++);
@@ -11,6 +11,6 @@ file_put_contents($file, $num_players++);
 </head>
 <body>
 <!-- <?php echo rand(1000000000, 9999999999); ?> -->
-  <button id="myBtn" value="<?php =$myNum; ?>"/>
+  <button id="myBtn" value="<?php echo $myNum; ?>"/>
 </body>
 </html>
