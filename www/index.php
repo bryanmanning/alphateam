@@ -52,13 +52,14 @@ function displayPlayers() {
 
 function doBanner() {
   $("#commandBtn").css("background-color", "green");
+  $("#commandBtn").animate({backgroundColor: 'red'},3 * 900);
   console.log("running timer");
   $.get("/score.php", function(data) { if(data == "-1") { alert("Score: " + $("#score").text());window.location.href="/index.php?reset=1"; } else { $("#score").text(data); }});
   var rnd = Math.floor((Math.random()*num_players));
   var num = rnd;
   $("#banner").text(num);
 
-  $("#commandBtn").animate({backgroundColor: 'red'},4 * 1000);
+
   $("#banner").effect("pulsate", { times:3 }, 500);
   $.get("/update.php?myId=<?php echo $myId; ?>&value=" + num);
 }
